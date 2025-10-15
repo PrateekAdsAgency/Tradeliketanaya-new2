@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trade Like Tanya 🚀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Top Moving Line */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #29a9ea;
+      font-size: 14px;
+      padding: 8px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      z-index: 999;
+    }
+    .top-bar span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 18s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Fullscreen Centered Section */
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    /* Logo */
+    .logo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #ffb703;
+      box-shadow: 0 0 25px rgba(255, 183, 3, 0.7);
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* Headline */
+    .headline {
+      font-size: 24px;
+      color: #ffb703;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* Subline */
+    .subline {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: rgba(0, 0, 0, 0.85);
+      border: 2px solid #ffb703;
+      border-radius: 15px;
+      padding: 30px 25px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 25px rgba(255, 183, 3, 0.5);
+    }
+
+    .proof {
+      color: #29a9ea;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    /* Join Button */
+    .join-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 0;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      background: #29a9ea;
+      animation: blink 1s infinite;
+      transition: all 0.3s ease;
+    }
+
+    @keyframes blink {
+      0%   { background: #29a9ea; color: #fff; }
+      50%  { background: #000; color: #29a9ea; }
+      100% { background: #29a9ea; color: #fff; }
+    }
+
+    /* Countdown */
+    .countdown {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 25px;
+      font-size: 11px;
+      color: #aaa;
+      max-width: 400px;
+      line-height: 1.4;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .headline { font-size: 20px; }
+      .subline { font-size: 14px; }
+      .join-btn { font-size: 16px; padding: 14px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <span>🔥 Learn Smart Trading | 💰 Earn Daily | 👥 31K+ Members | 🚀 Join Now</span>
+  </div>
+
+  <div class="container">
+   
+    <div class="cta-box">
+       <img src="logo.png" alt="Trade Like Tanya" class="logo">
+
+      <div class="headline">Trade Like Tanya</div>
+      <div class="subline">Grow your money fast. Learn how traders earn daily with simple signals.</div>
+      <div class="proof">👥 31,000+ Members Already Joined</div>
+      <a href="https://telegram.me/+0zHZHWaMkgQ3NDhl" class="join-btn">📲 Join Free Now</a>
+      <div class="countdown">Auto joining in <span id="timer">10</span>s...</div>
+    </div>
+
+    <div class="footer">
+      ⚠️ Educational only. Trading is risky. Results differ person to person.
+    </div>
+  </div>
+
+  <script>
+    let timeLeft = 10;
+    const timerEl = document.getElementById("timer");
+    const redirectUrl = "https://telegram.me/+0zHZHWaMkgQ3NDhl";
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href = redirectUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
