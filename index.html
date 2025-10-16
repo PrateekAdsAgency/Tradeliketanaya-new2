@@ -6,17 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
                   url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
@@ -24,11 +20,9 @@
       text-align: center;
     }
 
-    /* Top Moving Line */
     .top-bar {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       background: #000;
       color: #29a9ea;
@@ -38,17 +32,18 @@
       white-space: nowrap;
       z-index: 999;
     }
+
     .top-bar span {
       display: inline-block;
       padding-left: 100%;
       animation: ticker 18s linear infinite;
     }
+
     @keyframes ticker {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
 
-    /* Fullscreen Centered Section */
     .container {
       height: 100vh;
       width: 100%;
@@ -59,7 +54,6 @@
       padding: 0 20px;
     }
 
-    /* Logo */
     .logo {
       width: 130px;
       height: 130px;
@@ -70,7 +64,6 @@
       margin-bottom: 15px;
     }
 
-    /* Headline */
     .headline {
       font-size: 24px;
       color: #ffb703;
@@ -80,15 +73,13 @@
       letter-spacing: 1px;
     }
 
-    /* Subline */
     .subline {
       font-size: 16px;
       color: #ccc;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       line-height: 1.4;
     }
 
-    /* CTA Box */
     .cta-box {
       background: rgba(0, 0, 0, 0.85);
       border: 2px solid #ffb703;
@@ -97,6 +88,7 @@
       width: 90%;
       max-width: 400px;
       box-shadow: 0 0 25px rgba(255, 183, 3, 0.5);
+      text-align: center;
     }
 
     .proof {
@@ -105,7 +97,19 @@
       margin-bottom: 15px;
     }
 
-    /* Join Button */
+    .services {
+      list-style: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #ddd;
+      line-height: 1.8;
+      padding: 0;
+    }
+
+    .services li {
+      margin-bottom: 5px;
+    }
+
     .join-btn {
       display: block;
       width: 100%;
@@ -128,7 +132,6 @@
       100% { background: #29a9ea; color: #fff; }
     }
 
-    /* Countdown */
     .countdown {
       margin-top: 12px;
       font-size: 15px;
@@ -136,16 +139,15 @@
       font-weight: bold;
     }
 
-    /* Footer */
     .footer {
       margin-top: 25px;
       font-size: 11px;
       color: #aaa;
       max-width: 400px;
       line-height: 1.4;
+      text-align: center;
     }
 
-    /* Mobile */
     @media (max-width: 480px) {
       .headline { font-size: 20px; }
       .subline { font-size: 14px; }
@@ -160,19 +162,25 @@
   </div>
 
   <div class="container">
-   
     <div class="cta-box">
-       <img src="logo.png" alt="Trade Like Tanya" class="logo">
-
+      <img src="logo.png" alt="Trade Like Tanya" class="logo">
       <div class="headline">Trade Like Tanya</div>
       <div class="subline">Grow your money fast. Learn how traders earn daily with simple signals.</div>
+
+      <ul class="services">
+        <li>✅ 10–15 Sure Shot Signals Daily</li>
+        <li>✅ Personal Loss Recovery Sessions</li>
+        <li>✅ Proper Money Management Guidance</li>
+        <li>✅ Daily Live Zoom Trading Sessions</li>
+      </ul>
+
       <div class="proof">👥 31,000+ Members Already Joined</div>
       <a href="https://telegram.me/+0zHZHWaMkgQ3NDhl" class="join-btn">📲 Join Free Now</a>
       <div class="countdown">Auto joining in <span id="timer">10</span>s...</div>
     </div>
 
     <div class="footer">
-      ⚠️ Educational only. Trading is risky. Results differ person to person.
+      ⚠️ <b>Disclaimer:</b> All information shared is for educational purposes only. We do not provide financial or investment advice. Trading in financial markets involves risk of loss. Past performance does not guarantee future results. Participants are advised to trade responsibly and consult licensed professionals before investing.
     </div>
   </div>
 
